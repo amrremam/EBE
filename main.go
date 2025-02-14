@@ -6,8 +6,8 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-	// "github.com/amrremam/EBE/config"
-	// "github.com/amrremam/EBE/models"
+	"github.com/amrremam/EBE.git/config"
+	"github.com/amrremam/EBE.git/models"
 )
 
 func main() {
