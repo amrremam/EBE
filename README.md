@@ -1,13 +1,4 @@
 # EBE - To-Do List API
-
-EBE is a RESTful API built using Go (Gin), GORM, and PostgreSQL. It provides authentication via JWT and allows users to manage their to-do tasks.
-
-## Prerequisites
-Ensure you have the following installed:
-- [Go](https://go.dev/dl/)
-- [PostgreSQL](https://www.postgresql.org/download/)
-- [Docker](https://www.docker.com/) (optional, for containerization)
-
 ## Setup Instructions
 ### 1. Clone the Repository
 ```sh
