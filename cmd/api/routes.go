@@ -12,17 +12,17 @@ func Routes() *gin.Engine {
 	r := gin.Default()
 	
 	// Register routes
-	r.POST("/register", registerUser)
+	r.POST("/register", RegisterUser)
 	// Login routes
-	r.POST("/login", loginUser)
+	r.POST("/login", LoginUser)
 
 	// Protected routes (Require JWT)
 	authRoutes := r.Group("/")
 	authRoutes.Use(middleware.JWTMiddleware())
-	authRoutes.POST("/tasks", createTask)
-	authRoutes.GET("/tasks", getTasks)
-	authRoutes.PUT("/tasks/:id", updateTask)
-	authRoutes.DELETE("/tasks/:id", deleteTask)
+	authRoutes.POST("/tasks", CreateTask)
+	authRoutes.GET("/tasks", GetTasks)
+	authRoutes.PUT("/tasks/:id", UpdateTask)
+	authRoutes.DELETE("/tasks/:id", DeleteTask)
 
 	return r
 }

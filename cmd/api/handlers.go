@@ -12,7 +12,7 @@ import (
 )
 
 
-func registerUser(c *gin.Context) {
+func RegisterUser(c *gin.Context) {
 	var user models.User
 	if err := c.ShouldBindJSON(&user); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
@@ -40,7 +40,7 @@ func registerUser(c *gin.Context) {
 
 
 
-func loginUser(c *gin.Context) {
+func LoginUser(c *gin.Context) {
 	var login models.Login
 	if err := c.ShouldBindJSON(&login); err != nil {
 		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
@@ -73,7 +73,7 @@ func loginUser(c *gin.Context) {
 
 
 // CreateTask endpoint
-func createTask(c *gin.Context) {
+func CreateTask(c *gin.Context) {
 	// Retrieve user ID from JWT middleware
 	userIDStr, exists := c.Get("userID")
 	if !exists {
@@ -110,7 +110,7 @@ func createTask(c *gin.Context) {
 
 
 // Get-Task
-func getTasks(c *gin.Context) {
+func GetTasks(c *gin.Context) {
 	// Retrieve user ID from JWT middleware
 	userIDStr, exists := c.Get("userID")
 	if !exists {
@@ -136,7 +136,7 @@ func getTasks(c *gin.Context) {
 }
 
 
-func updateTask(c *gin.Context) {
+func UpdateTask(c *gin.Context) {
 	// Extract user ID from JWT
 	userIDStr, exists := c.Get("userID")
 	if !exists {
@@ -180,7 +180,7 @@ func updateTask(c *gin.Context) {
 
 
 
-func deleteTask(c *gin.Context) {
+func DeleteTask(c *gin.Context) {
 	// Extract user ID from JWT
 	userIDStr, exists := c.Get("userID")
 	if !exists {
